@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Doctors Appointment App",
-  description: "Connect with doctors anytime, anywhere",
+  description: "Connect with Doctors Anytime, anywhere",
 };
 
 export default function RootLayout({ children }) {
@@ -35,7 +35,7 @@ export default function RootLayout({ children }) {
             <main className="min-h-screen">{children}</main>
             <Toaster richColors />
 
-            <footer className="bg-muted/50 py-12 text-gray-200">
+            <footer className="bg-muted/50 py-6 text-gray-200">
   <div className="container mx-auto px-4">
     <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-6">
 
