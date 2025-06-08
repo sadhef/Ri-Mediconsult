@@ -35,19 +35,8 @@ export default function RootLayout({ children }) {
             <main className="min-h-screen">{children}</main>
             <Toaster richColors />
 
-            <footer className="bg-muted/50 py-6 text-gray-200">
+            <footer className="bg-muted/50 py-4 text-gray-200">
   <div className="container mx-auto px-2">
-    <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-6">
-
-
-      {/* Social Icons */}
-      <div className="flex space-x-4">
-        <a href="#" className="hover:text-white">🐦</a>
-        <a href="#" className="hover:text-white">💼</a>
-        <a href="#" className="hover:text-white">📸</a>
-      </div>
-    </div>
-
     <div className="mt-8 text-sm text-center text-gray-400">
       &copy; {new Date().getFullYear()} Sadhef. All rights reserved.
     </div>
