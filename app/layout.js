@@ -3,7 +3,7 @@ import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import { Toaster } from "sonner";
 import Header from "@/components/header";
-import { neobrutalism } from "@clerk/themes";
+import { shadesOfPurple } from "@clerk/themes";
 import { ThemeProvider } from "@/components/theme-provider";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
   return (
     <ClerkProvider
       appearance={{
-        baseTheme: neobrutalism,
+        baseTheme: shadesOfPurple,
       }}
     >
       <html lang="en" suppressHydrationWarning>
@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
         <body className={`${inter.className}`}>
           <ThemeProvider
             attribute="class"
-            defaultTheme="neobrutalism"
+            defaultTheme="dark"
             enableSystem
             disableTransitionOnChange
           >
