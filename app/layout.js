@@ -3,7 +3,7 @@ import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import { Toaster } from "sonner";
 import Header from "@/components/header";
-import { dark } from "@clerk/themes";
+import { neobrutalism } from "@clerk/themes";
 import { ThemeProvider } from "@/components/theme-provider";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
         <body className={`${inter.className}`}>
           <ThemeProvider
             attribute="class"
-            defaultTheme="dark"
+            defaultTheme="neobrutalism"
             enableSystem
             disableTransitionOnChange
           >
