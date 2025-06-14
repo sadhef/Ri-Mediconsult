@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-@custom-variant dark (&:is(.dark *));
+@custom-variant light (&:is(.light *));
 
 @theme inline {
   --color-background: var(--background);
@@ -43,88 +43,370 @@
   --radius-xl: calc(var(--radius) + 4px);
 }
 
+/* LIGHT THEME CONFIGURATION */
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  --background: 255 255 255; /* White */
+  --foreground: 17 24 39; /* Very dark gray/black */
+  --card: 255 255 255; /* White */
+  --card-foreground: 17 24 39; /* Very dark gray/black */
+  --popover: 255 255 255; /* White */
+  --popover-foreground: 17 24 39; /* Very dark gray/black */
+  --primary: 59 130 246; /* Blue */
+  --primary-foreground: 255 255 255; /* White text on blue */
+  --secondary: 249 250 251; /* Light gray */
+  --secondary-foreground: 17 24 39; /* Very dark gray/black */
+  --muted: 249 250 251; /* Light gray */
+  --muted-foreground: 75 85 99; /* Dark gray for muted text */
+  --accent: 249 250 251; /* Light gray */
+  --accent-foreground: 17 24 39; /* Very dark gray/black */
+  --destructive: 239 68 68; /* Red */
+  --destructive-foreground: 255 255 255; /* White text on red */
+  --border: 229 231 235; /* Light gray */
+  --input: 249 250 251; /* Light gray */
+  --ring: 59 130 246; /* Blue */
+  --chart-1: oklch(0.55 0.25 30); /* Orange chart color */
+  --chart-2: oklch(0.6 0.2 180); /* Teal chart color */
+  --chart-3: oklch(0.45 0.15 220); /* Blue chart color */
+  --chart-4: oklch(0.7 0.25 90); /* Green chart color */
+  --chart-5: oklch(0.65 0.2 60); /* Yellow chart color */
+  --sidebar: 255 255 255; /* Light sidebar */
+  --sidebar-foreground: 17 24 39; /* Dark sidebar text */
+  --sidebar-primary: 59 130 246; /* Blue sidebar primary */
+  --sidebar-primary-foreground: 255 255 255; /* White sidebar primary text */
+  --sidebar-accent: 249 250 251; /* Light sidebar accent */
+  --sidebar-accent-foreground: 17 24 39; /* Dark sidebar accent text */
+  --sidebar-border: 229 231 235; /* Light sidebar borders */
+  --sidebar-ring: 59 130 246; /* Blue sidebar focus rings */
+  color-scheme: light !important;
 }
 
+/* OVERRIDE DARK THEME COMPLETELY */
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+  --background: 255 255 255 !important;
+  --foreground: 17 24 39 !important;
+  --card: 255 255 255 !important;
+  --card-foreground: 17 24 39 !important;
+  --popover: 255 255 255 !important;
+  --popover-foreground: 17 24 39 !important;
+  --primary: 59 130 246 !important;
+  --primary-foreground: 255 255 255 !important;
+  --secondary: 249 250 251 !important;
+  --secondary-foreground: 17 24 39 !important;
+  --muted: 249 250 251 !important;
+  --muted-foreground: 75 85 99 !important;
+  --accent: 249 250 251 !important;
+  --accent-foreground: 17 24 39 !important;
+  --destructive: 239 68 68 !important;
+  --destructive-foreground: 255 255 255 !important;
+  --border: 229 231 235 !important;
+  --input: 249 250 251 !important;
+  --ring: 59 130 246 !important;
+  color-scheme: light !important;
 }
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
+    color-scheme: light !important;
   }
+  
   body {
     @apply bg-background text-foreground;
+    background-color: white !important;
+    color: rgb(17, 24, 39) !important;
   }
 }
 
+/* FORCE BLACK TEXT EVERYWHERE */
+*,
+*::before,
+*::after {
+  color: rgb(17, 24, 39) !important;
+}
+
+/* SPECIFIC ELEMENT OVERRIDES */
+h1, h2, h3, h4, h5, h6 {
+  color: rgb(17, 24, 39) !important;
+}
+
+p, span, div, a, li, td, th, label {
+  color: rgb(17, 24, 39) !important;
+}
+
+/* LINK STATES */
+a:hover {
+  color: rgb(59, 130, 246) !important;
+}
+
+/* BUTTON OVERRIDES */
+button {
+  color: rgb(17, 24, 39) !important;
+}
+
+.bg-primary,
+.bg-blue-500,
+.bg-blue-600,
+button[class*="bg-blue"],
+button[class*="bg-primary"] {
+  color: white !important;
+}
+
+/* MUTED TEXT HIERARCHY */
+.text-muted-foreground,
+.text-gray-500,
+.text-slate-500 {
+  color: rgb(75, 85, 99) !important;
+}
+
+.text-gray-400,
+.text-slate-400 {
+  color: rgb(107, 114, 128) !important;
+}
+
+/* COMPONENT SPECIFIC OVERRIDES */
+header {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgb(229, 231, 235) !important;
+}
+
+header,
+header * {
+  color: rgb(17, 24, 39) !important;
+}
+
+nav,
+nav * {
+  color: rgb(17, 24, 39) !important;
+}
+
+nav a:hover {
+  color: rgb(59, 130, 246) !important;
+}
+
+footer {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  color: rgb(17, 24, 39) !important;
+  border-top: 1px solid rgb(229, 231, 235) !important;
+}
+
+footer * {
+  color: rgb(17, 24, 39) !important;
+}
+
+footer a:hover {
+  color: rgb(59, 130, 246) !important;
+}
+
+.card,
+.card * {
+  color: rgb(17, 24, 39) !important;
+  background-color: white !important;
+  border: 1px solid rgb(229, 231, 235) !important;
+}
+
+/* FORM ELEMENTS */
+input,
+textarea,
+select {
+  background-color: white !important;
+  border: 1px solid rgb(229, 231, 235) !important;
+  color: rgb(17, 24, 39) !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgb(156, 163, 175) !important;
+}
+
+/* BADGE STYLING */
+.badge {
+  background-color: rgb(239, 246, 255) !important;
+  color: rgb(29, 78, 216) !important;
+  border: 1px solid rgb(191, 219, 254) !important;
+}
+
+/* TABLE ELEMENTS */
+table,
+table * {
+  color: rgb(17, 24, 39) !important;
+}
+
+/* MODAL AND DIALOG ELEMENTS */
+[role="dialog"],
+[role="dialog"] * {
+  color: rgb(17, 24, 39) !important;
+}
+
+[role="menu"],
+[role="menu"] * {
+  color: rgb(17, 24, 39) !important;
+}
+
+/* TOOLTIP STYLING */
+[role="tooltip"] {
+  background-color: rgb(17, 24, 39) !important;
+  color: white !important;
+}
+
+/* TOAST NOTIFICATIONS */
+.toaster,
+.toaster * {
+  color: rgb(17, 24, 39) !important;
+}
+
+[data-sonner-toast] {
+  background-color: white !important;
+  color: rgb(17, 24, 39) !important;
+  border: 1px solid rgb(229, 231, 235) !important;
+}
+
+/* CLERK COMPONENTS */
+.cl-internal-b3fm6y,
+.cl-userButtonPopoverCard,
+.cl-userButtonPopoverActionButton {
+  color: rgb(17, 24, 39) !important;
+}
+
+/* RADIX COMPONENTS */
+[data-radix-select-content],
+[data-radix-dropdown-menu-content],
+[data-radix-popover-content] {
+  background-color: white !important;
+  color: rgb(17, 24, 39) !important;
+  border: 1px solid rgb(229, 231, 235) !important;
+}
+
+/* TAILWIND CLASS OVERRIDES */
+.bg-background {
+  background-color: white !important;
+}
+
+.text-foreground {
+  color: rgb(17, 24, 39) !important;
+}
+
+.bg-card {
+  background-color: white !important;
+}
+
+.text-card-foreground {
+  color: rgb(17, 24, 39) !important;
+}
+
+.bg-muted {
+  background-color: rgb(249, 250, 251) !important;
+}
+
+.border-border {
+  border-color: rgb(229, 231, 235) !important;
+}
+
+.text-white {
+  color: rgb(17, 24, 39) !important;
+}
+
+/* KEEP WHITE TEXT ON COLORED BACKGROUNDS */
+.bg-blue-500 .text-white,
+.bg-blue-600 .text-white,
+.bg-primary .text-white,
+.bg-emerald-500 .text-white,
+.bg-emerald-600 .text-white,
+.bg-red-500 .text-white,
+.bg-red-600 .text-white {
+  color: white !important;
+}
+
+/* UTILITIES AND ANIMATIONS */
 @utility gradient {
-  @apply bg-gradient-to-b from-emerald-500 to-teal-400;
+  @apply bg-gradient-to-b from-blue-500 to-indigo-600;
 }
 
 @utility gradient-title {
-  @apply gradient font-bold text-transparent bg-clip-text pb-1 pr-2;
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8, #6366f1) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  font-weight: bold;
+}
+
+@utility gradient-healthcare {
+  @apply bg-gradient-to-b from-emerald-500 to-teal-600;
+}
+
+@keyframes light-pulse {
+  0%, 100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.animate-light-pulse {
+  animation: light-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* SHADOWS */
+.shadow-light {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.shadow-light-lg {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.shadow-sm {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05) !important;
+}
+
+.shadow {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+}
+
+.shadow-lg {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(249, 250, 251);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(156, 163, 175);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(107, 114, 128);
+}
+
+/* SELECTION */
+::selection {
+  background: rgba(59, 130, 246, 0.2) !important;
+  color: rgb(17, 24, 39) !important;
+}
+
+/* ACCESSIBILITY */
+:disabled {
+  color: rgb(156, 163, 175) !important;
+}
+
+:focus {
+  outline: 2px solid rgb(59, 130, 246) !important;
+  outline-offset: 2px !important;
+}
+
+/* OVERRIDE THEME DETECTION */
+[data-theme="dark"],
+.dark-theme,
+.theme-dark {
+  background-color: white !important;
+  color: rgb(17, 24, 39) !important;
 }
